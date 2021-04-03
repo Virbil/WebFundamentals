@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My Registration Form</title>
+        <meta name="header_description" content="This is my first Registration Form">
+    </head>
+
+    <body>
+        <form>
+            <!-- Top Textbox Section -->
+            <label for="first_name">First Name </label>
+            <input type="text" id="first_name" name="first_name">
+            <br>
+            <br>
+            <label for="last_name">Last Name </label>
+            <input type="text" id="last_name" name="last_name">
+            <br>
+            <br>          
+            <label for="email">Email </label>
+            <input type="text" id="email" name="email">
+            <br>
+            <br>          
+            <label for="password">Password </label>
+            <input type="password" id="password" name="password">
+            <br>
+            <br>
+            <label for="pw_confirm">PW Confirm </label>
+            <input type="password" id="pw_confirm" name="pw_confirm">
+            <br>
+            <br>
+            <label for="birthday">Birthday </label>
+            <input type="date" id="birthday" name="birthday">
+            <!-- <input type="text" id="birthday" name="birthday" placeholder="mm/dd/yyy" onfocus="(this.type='date')"> --> 
+            <!-- <img src="calendar-512.jpg" alt="calendar icon" width="20" height="20"> -->
+            <br>
+            <br>
+
+            <!-- Middle Radio Button Section -->
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <br>
+            <br>        
+
+            <!-- Lower Textarea Section -->
+            <p>A short description about yourself </p>
+            <textarea name="description"></textarea>
+            <br>
+            <br>
+
+            <!-- Lowest Dropdown Section -->
+            <label for="fav_language">Favorite Language</label>
+            <select name="fav_language" id="fav_language">
+                <option value="JavaScript">JavaScript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+            </select>
+            <br>
+            <br>          
+           <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+
