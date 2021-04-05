@@ -2,19 +2,20 @@
 *{ 
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
    }
    #wrapper{
     width: 800px;
     background-color: tan;
     padding: 10px;
    }
-   #header img{
-    display:inline-block !important;
-    margin-left: auto;
-    margin-right: auto;
+   #header {
+    display: inline-block;
+    margin: auto;
+    width: 500px;
    }
    #header h1{
-    display:inline-block !important;
+    display:inline-block;
     text-align: center;
    }
    #main_content{
@@ -31,17 +32,19 @@
    }
    #odd{
     background-color: turquoise;
-    padding: 5px;
+    padding: 10px;
    }
    #even{
     background-color: pink;
-   }
-   #div img{
-    display:inline-block !important;
-    text-align: center;
    }
    img {
     width: 100px;
     height: 100px;
     border: solid;
+   }
+   #header img{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
    }
