@@ -1,0 +1,41 @@
+/* Part 1 */
+.center-box {
+    background-color: darkblue;
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.center-item {
+    background-color: burlywood;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Part 2 */
+.nav {
+    background-color: #C3CDE6;
+    width: 1000px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.sites {
+    display: inline-flex;
+    flex: 2;
+}
+a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
+img {
+    width: 50px;
+    height: 50px;
+}
