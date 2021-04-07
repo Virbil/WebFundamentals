@@ -1,0 +1,128 @@
+* {
+    /*outline: 1px dotted red;*/
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;    
+}
+.container {
+    width: 780px;
+    height: 600px;
+    padding: 20px;
+}
+.header {
+    background-color: #f5f5f5;
+    min-height: 10px;
+    padding: 5px;
+}
+.header h1 {
+    display: inline-block;
+    min-width: 430px;
+}
+.header h3 {
+    display: inline-block;
+    text-align: center;
+}
+.header_mid {
+    background-image: radial-gradient(#1f0e13,#6f5964);
+    padding: 10px;
+}
+.portfolio-img {
+    display: inline-block;
+    border: solid lightgray 4px;
+    width: 370px;
+    min-height: 200px; 
+}
+.about {
+    display: inline-block;
+    background-color: lightgray;
+    width: 370px;
+    min-height: 251px;
+    vertical-align: top;
+}
+    .about h3 {
+        background-color: grey;
+        color: white;
+        padding: 2px;
+    }
+
+.main {
+    background-image: radial-gradient(#1f0e13,#6f5964);
+    display: inline-block;
+    width: 780px;
+}
+.box {
+    display: inline-block;
+    background-color: lightgray;
+    width: 235px;
+    height: 550px;
+    margin: 10px;
+    vertical-align: top;
+}
+    .box h3 {
+        background-color: grey;
+        color: white;
+        padding: 2px;
+        margin-bottom: 5px;
+    }
+    .box p {
+        background-color: #e0d4df;
+        min-height: 170px;
+        overflow-wrap: break-word;
+    }
+    .main-img {
+        border: solid #f5f5f5 4px;
+        width: 227px;
+        min-height: 150px;
+    }
+.tech {
+    background-color: #e0d4df;
+    display: inline-block;
+    margin-left: 15px;
+}
+    .tech-img {
+        margin: 2px;
+        width: 35px;
+        height: 35px;
+    }
+.btn-wrapper {
+    background-color: #407d61;
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 15px;
+    border: solid black 1px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 5px grey;
+}
+    .box a{
+        text-decoration: none;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+.footer {
+    background-color: #f5f5f5;
+    color: black;
+    padding: 5px;
+    min-height: 20px;
+    width: 99%;
+    text-align: center;
+    vertical-align: middle;
+}
+    .footer p {
+        margin-bottom: 5px;
+    }
+    .footer a {
+        display: inline-block;
+        text-align: center;
+        margin-left: 8px;
+    }
+    .footer img {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
