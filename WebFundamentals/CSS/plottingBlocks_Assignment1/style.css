@@ -23,7 +23,7 @@
    }
    #main_content{
     min-height: 400px;
-    width: 655px;
+    width: 674px;
     background-color: red;
     display: inline-block;
     vertical-align: top;
@@ -31,7 +31,7 @@
    }
    .subcontents{
     min-height: 125px;
-    width: 155px;
+    width: 160px;
     background-color: yellow;
     display: inline-block;
     margin: 10px;
@@ -39,7 +39,7 @@
    }
    #advertisement{
     min-height: 100px;
-    width: 592px;
+    width: 607px;
     background-color: purple;
     margin: 10px;
     padding: 20px;
