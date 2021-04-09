@@ -6,7 +6,7 @@
    #wrapper{
     width: 950px;
     background-color: silver;
-    padding: 10px;
+    padding: 20px;
    }
    #header{
     min-height: 150px;
@@ -23,22 +23,24 @@
    }
    #main_content{
     min-height: 400px;
-    width: 700px;
+    width: 655px;
     background-color: red;
     display: inline-block;
     vertical-align: top;
-
+    padding: 10px;
    }
    .subcontents{
-    min-height: 200px;
-    width: 210px;
+    min-height: 125px;
+    width: 155px;
     background-color: yellow;
     display: inline-block;
-    margin: 10px 5px;
+    margin: 10px;
+    padding: 20px;
    }
    #advertisement{
-    min-height: 120px;
-    width: 660px;
+    min-height: 100px;
+    width: 592px;
     background-color: purple;
     margin: 10px;
+    padding: 20px;
    }
