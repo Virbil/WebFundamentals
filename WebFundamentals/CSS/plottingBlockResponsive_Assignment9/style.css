@@ -1,0 +1,118 @@
+/*CSS reset settings here*/
+*{ 
+    margin: 0px;
+    padding: 0px;
+   }
+
+@media only screen and (max-width: 480px){
+    /* we will set these stylings only if the device is a screen with a width of 480px or less */
+    .wrapper-sm {
+        width: 350px;
+        background-color: silver;
+        padding: 10px;
+    }
+    .hdr-sm {
+        min-height: 100px;
+        background-color: green;
+        margin: 20px;
+    }
+    .nav-sm {
+        display: none;
+    }
+    .main-sm {
+        min-height: auto;
+        background-color: red;
+        padding: 10px;
+    }
+    .sub-sm {
+        min-height: 120px;
+        background-color: yellow;
+        margin: 20px;
+    }
+    .ad-sm {
+        min-height: 100px;
+        background-color: purple;
+        margin: 20px;
+    }
+}
+@media only screen and (min-width: 481px){
+    /* we will set these stylings only if the device is a screen with a width of 481px or more */
+    .wrapper-md {
+        width: 650px;
+        background-color: silver;
+        padding: 10px;
+    }
+    .hdr-md {
+        min-height: 150px;
+        background-color: green;
+        margin: 20px;
+    }
+    .nav-md {
+        display: none;
+    }
+    .main-md {
+        min-height: 400px;
+        background-color: red;
+        margin: 20px;
+        padding: 20px;
+    }
+    .sub-md {
+        min-height: 150px;
+        width: 200px;
+        background-color: yellow;
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+    }
+    .ad-md {
+        min-height: 100px;
+        width: 500px;
+        background-color: purple;
+        margin: 20px;
+        padding: 20px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    /* we will set these stylings only if the device is a screen with a width of 1024px or more */
+    .wrapper-lg {
+        width: 980px;
+        background-color: silver;
+        padding: 10px;
+    }
+    .hdr-lg {
+        min-height: 150px;
+        background-color: green;
+        margin: 20px;
+    }
+    .nav-lg {
+        min-height: 300px;
+        width: 200px;
+        background-color: blue;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px 0 20px;
+    }
+    .main-lg {
+        min-height: 400px;
+        width: 688px;
+        background-color: red;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+    }
+    .sub-lg {
+        min-height: 150px;
+        width: 186px;
+        background-color: yellow;
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+    }
+    .ad-lg {
+        min-height: 100px;
+        width: 649px;
+        background-color: purple;
+        margin: 10px;
+        padding: 10px;
+    }
+}
