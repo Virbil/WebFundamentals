@@ -152,16 +152,11 @@ console.log(stats([1,5,10,-2]));
 
 // 12. Swap Values
 function swapValues(x) {
-    var copyArr = x;
     var temp = x[x.length - 1];
-    var tempStart = x[0];
-
-    if (x.length >= 2) {
-      copyArr[0] = temp;
-      copyArr[x.length - 1] = tempStart;
-    }
-    
-    return copyArr;
+    x[x.length - 1] = x[0];
+    x[0] = temp;
+	
+    return x;
 }
 console.log(swapValues([1,5,10,-2]));
 
