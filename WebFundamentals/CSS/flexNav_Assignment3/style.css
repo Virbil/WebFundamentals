@@ -17,25 +17,30 @@
 
 /* Part 2 */
 .nav {
-    background-color: #C3CDE6;
-    width: 1000px;
+    background-color: #6495ed;
+    width: 1200px;
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
-.sites {
-    display: inline-flex;
-    flex: 2;
+img {
+    margin: 10px;
+    height: 80px;
+}
+h1 {
+    margin-left: 65px;
+}
+ul {
+    display: flex;
+    margin-left: auto;
+    list-style-type: none;
 }
 a {
     color: white;
+    align-items: center;
     list-style-type: none;
     text-decoration: none;
-}
-img {
-    width: 50px;
-    height: 50px;
+    margin: 0 55px;
 }
