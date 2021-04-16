@@ -1,0 +1,112 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    padding-top: 3rem;
+}
+nav form {
+    margin-left: 70%;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+  /* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+  /* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 27rem;
+    background-color: #777;
+}
+.carousel-item > img {
+    vertical-align: auto;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* START OF MAIN */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: lightgrey;
+    margin-top: -50px;
+}
+/* SIDE NAV */
+.nav {
+    flex: 1;
+    height: 500px;
+    padding: 20px;
+    border: 2px solid black;
+}
+.input-group {
+    align-items: center;
+    height: 30px;
+    margin-left: 20px;
+}
+.input-group-text img {
+    width: 25px;
+    display: inline-block;
+}
+.list-group {
+    margin-left: 20px;
+}
+.list-group-item {
+    align-items: center;
+    width: 200px;
+}
+
+
+/* SHOP */
+.shop {
+    flex: 3;
+    color: whitesmoke;
+    height: auto;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.shop h3 {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    height: 85%;
+    justify-content: space-evenly;
+}
+.product {
+    background-color: coral;
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #777;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px;
+    min-width: 100%;
+}
+footer a {
+    color: whitesmoke;
+}

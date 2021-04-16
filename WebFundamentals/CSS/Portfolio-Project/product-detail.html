@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/product-detail.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <title>Product Details</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Dojo eCommerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a class="text-white" href="check-out.html">Go to Cart</a></button>
+        </form>
+    </nav>
+
+    <main role="main">
+        <div class="content">    
+            <h3 class="m-2">Crew Tshirt</h3>
+
+            <div class="product-detail d-flex">
+                <div class="product-images">
+                    <img class="product-img mb-4" src="./assets/img/dojo-icon.png" alt="Product img">
+    
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item mx-auto"><img class="alt-pics" src="./assets/img/dojo-icon.png" alt="Product img"></li>
+                        <li class="list-group-item mx-auto"><img class="alt-pics" src="./assets/img/dojo-icon.png" alt="Product img"></li>
+                        <li class="list-group-item mx-auto"><img class="alt-pics" src="./assets/img/dojo-icon.png" alt="Product img"></li>
+                        <li class="list-group-item mx-auto"><img class="alt-pics" src="./assets/img/dojo-icon.png" alt="Product img"></li>
+                        <li class="list-group-item mx-auto"><img class="alt-pics" src="./assets/img/dojo-icon.png" alt="Product img"></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-dark">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Nobis debitis in corporis quibusdam cumque et libero ex, 
+                        itaque, aliquid mollitia, sint quas quos neque culpa asperiores. 
+                        Eos ab omnis perspiciatis. Lorem ipsum, dolor sit amet 
+                        consectetur adipisicing elit. Incidunt perferendis, molestiae 
+                        suscipit dolores minus, eligendi quas quo sunt autem animi, 
+                        est itaque error illum nobis! Reprehenderit odit rem officia 
+                        recusandae? Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Eius nisi aspernatur sed sapiente ratione reiciendis 
+                        beatae veritatis incidunt, dolor sint, nobis quo repellat est! 
+                        Tempora repudiandae quae neque qui quam. Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. Laborum rem ullam, laboriosam 
+                        labore consectetur porro eius amet similique non, nemo deleniti, 
+                        omnis consequuntur quisquam suscipit! Numquam explicabo veniam 
+                        doloremque quae? Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Minima vel eaque odit neque officia facilis dolor? Architecto 
+                        ad consequuntur itaque, placeat ducimus culpa vel omnis eaque a et 
+                        unde sunt?
+                    </p>
+
+                    <div class="dropdown d-flex justify-content-center mr-5">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose size
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Small - Green (19.99)</a>
+                            <a class="dropdown-item" href="#">Medium - Green (19.99)</a>
+                            <a class="dropdown-item" href="#">Large - Green (19.99)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            <h4 class="ml-5">Similar Items: </h4>
+            <ul class="list-group list-group-horizontal similar-items">
+                <li class="list-group-item mx-auto">
+                    <img src="./assets/img/dojo-icon.png" alt="Product img">
+                    <p class="text-center">V neck</p>
+                </li>
+                <li class="list-group-item mx-auto">
+                    <img src="./assets/img/dojo-icon.png" alt="Product img">
+                    <p class="text-center">Longsleeve</p>
+                </li>
+                <li class="list-group-item mx-auto">
+                    <img src="./assets/img/dojo-icon.png" alt="Product img">
+                    <p class="text-center">Tank</p>
+                </li>
+                <li class="list-group-item mx-auto">
+                    <img src="./assets/img/dojo-icon.png" alt="Product img">
+                    <p class="text-center">Sweatshirt</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2021 Dojo eCommerce &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+</body>
+</html>
