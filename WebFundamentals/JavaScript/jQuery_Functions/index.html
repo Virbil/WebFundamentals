@@ -17,7 +17,7 @@
     <div id="slideToggle">
         <h1>Slidetoggle</h1>
         <button id="slidetoggle">Slidetoggle</button>
-        <p>Click the button to slidtoggle a hidden image</p>
+        <p>Click the button to slidetoggle a hidden image</p>
         <img src="cooler.png" alt="" hidden='true' height="300px">
     </div>
 
@@ -40,34 +40,45 @@
         <input id="submit" type="submit" value="Submit">
     </div>
 
-    <ul id="list">
-        <li>Mistborn</li>
-        <li>The Well of Ascension</li>
-        <li>The Hero of Ages</li>
-    </ul>
-    <button id="addBefore">Add Before</button>
+    <div>
+        <ul id="list">
+            <li>Mistborn</li>
+            <li>The Well of Ascension</li>
+            <li>The Hero of Ages</li>
+        </ul>
+        <button id="addBefore">Add Before</button>
+    </div>
+
     <br><br>
 
-    <form>
-        <h1>My Form</h1>
-        <label class="my-name" type="text">First Name: </label>
-        <input id="first-name" type="text" placeholder="Enter First Name">
-        <label class="my-name" type="text">Last Name: </label>
-        <input id="last-name" type="text" placeholder="Enter Last Name">
-        
-        <!-- FADE IN, FADE OUT -->
-        <button id="fade-out">Fade Out Form Labels</button>
-        <button id="fade-in">Fade Back In</button>
+    <div>
+        <h1 id="my-form">My Form</h1>
 
-        <br><br>
+        <form>
+            <label id="first-name" type="text">First Name: </label>
+            <input class="my-name" type="text" placeholder="Enter First Name">
+            <label id="last-name" type="text">Last Name: </label>
+            <input class="my-name" type="text" placeholder="Enter Last Name">
+            
+            <!-- FADE IN, FADE OUT -->
+            <button id="fade-out">Fade Out Form H1</button>
+            <button id="fade-in">Fade Back In</button>
+    
+            <br><br>
+    
+            <input type="radio" id="mistborn" name="book1" value="mistborn">
+            <label for="mistborn">Mistborn</label><br>
+            <input type="radio" id="wellOfAscension" name="book2" value="wellOfAscension">
+            <label for="wellOfAscension">The Well Of Ascension</label><br>
+            <input type="radio" id="heroOfAges" name="book3" value="heroOfAges">
+            <label for="heroOfAges">The Hero Of Ages</label>
+        </form>
+    </div>
 
-        <input type="radio" id="mistborn" name="book1" value="mistborn">
-        <label for="mistborn">Mistborn</label><br>
-        <input type="radio" id="wellOfAscension" name="book2" value="wellOfAscension">
-        <label for="wellOfAscension">The Well Of Ascension</label><br>
-        <input type="radio" id="heroOfAges" name="book3" value="heroOfAges">
-        <label for="heroOfAges">The Hero Of Ages</label>
-    </form>
+    <div>
+        <h1 id="brandon">Brandon Sanderson is the best!</h1>
+        <button id="add-text">Add Text to H1</button>
+    </div>
     
     <hr>
     <button id="attrInline">Add Attribute</button>
@@ -121,13 +132,23 @@
 
             // FADE IN, FADE OUT
             $('#fade-out').click(function() {
-                $('form h1').fadeOut();
+                $('#my-form').fadeOut('slow');
             })
 
             $('#fade-in').click(function() {
-                $('form h1').fadeIn();
+                $('#my-form').fadeIn('slow');
             })
 
+            // VAL CHANGE UPPERCASE ALL
+            $('.my-name').on('blur', function() {
+                $(this).val(function( i, val ) {
+                    return val.toUpperCase();
+                });
+            })
+
+            $('#add-text').click(function() {
+                $('#brandon').text("Brandon Sanderson's world building is the best!");
+            })
 
             // SLIDE UP, SLIDE DOWN
             $('#mistborn').click(function() {
