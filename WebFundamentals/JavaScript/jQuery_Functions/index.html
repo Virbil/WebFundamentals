@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQuery Functions</title>
+</head>
+<body>
+    <div id="addClass">
+        <h1>AddClass</h1>
+        <button id="add-class">AddClass</button>
+        <p id="myRedParagraph">Click the button to add class 'red' to this paragraph</p>
+    </div>
+
+    <div id="slideToggle">
+        <h1>Slidetoggle</h1>
+        <button id="slidetoggle">Slidetoggle</button>
+        <p>Click the button to slidtoggle a hidden image</p>
+        <img src="cooler.png" alt="" hidden='true' height="300px">
+    </div>
+
+    <div id="append">
+        <h1>Append</h1>
+        <button id="append">Append</button>
+        <p id="get-appended">Click the button to append a new paragraph</p>
+    </div>
+
+    <div class="demo-container">    <!-- INTENTIONALLY LEFT AS A CLASS -->
+        <h1 class="demo-box">Demonstration Box</h1>
+        <p>This h2 inner HTML is about to change.</p>
+    </div>
+    <button id="changeHTML">Change the HTML now!</button>
+
+    <div id="hideMe">
+        <h1>Practicing hiding single elements like a clicked button</h1>
+        <p>My jQuery is selecting a button inside a named id.</p>
+        <button>Hide Me</button>
+        <input id="submit" type="submit" value="Submit">
+    </div>
+
+    <ul id="list">
+        <li>Mistborn</li>
+        <li>The Well of Ascension</li>
+        <li>The Hero of Ages</li>
+    </ul>
+    <button id="addBefore">Add Before</button>
+    <br><br>
+
+    <form>
+        <h1>My Form</h1>
+        <label class="my-name" type="text">First Name: </label>
+        <input id="first-name" type="text" placeholder="Enter First Name">
+        <label class="my-name" type="text">Last Name: </label>
+        <input id="last-name" type="text" placeholder="Enter Last Name">
+        
+        <!-- FADE IN, FADE OUT -->
+        <button id="fade-out">Fade Out Form Labels</button>
+        <button id="fade-in">Fade Back In</button>
+
+        <br><br>
+
+        <input type="radio" id="mistborn" name="book1" value="mistborn">
+        <label for="mistborn">Mistborn</label><br>
+        <input type="radio" id="wellOfAscension" name="book2" value="wellOfAscension">
+        <label for="wellOfAscension">The Well Of Ascension</label><br>
+        <input type="radio" id="heroOfAges" name="book3" value="heroOfAges">
+        <label for="heroOfAges">The Hero Of Ages</label>
+    </form>
+    
+    <hr>
+    <button id="attrInline">Add Attribute</button>
+    <hr>
+
+    <hr>
+    <button id="attrCSS">Add a Bunch of CSS</button>
+    <hr>
+
+    <script>
+        $(document).ready(function(){
+            console.log($(document).val());
+            
+            $('#add-class').click(function() {
+                $('#myRedParagraph').addClass('myAddedClass');                
+            })
+            
+            $('p').click(function() {
+                $(this).after('<p>Adding another p after the clicked </p>');
+                // console.log('hitting click event listener');
+            })
+
+            $('#slidetoggle').click(function() {
+                $('img').slideToggle('slow');
+            }); // is the semi-colon necessary?
+
+            $('img').hover(function() {
+                $(this).attr('alt', 'Unicorn cat');
+            })
+
+            $('#append').click(function() {
+                $('#get-appended').append('<p>Testing adding a new paragraph</p>')
+            })
+            
+            $('#changeHTML').click(function() {
+                $('div.demo-container').html('<h3>All new content. <em>I replaced the h2</em></h3>');
+            })
+
+            $('#hideMe button').click(function() {
+                $(this).hide();
+            })
+
+            $('#submit').click(function() {  //input[type=submit]
+                $('#hideMe button').show();
+            })
+            
+            $('#addBefore').click(function() {
+                $('#list').before('<h1>Best Fantasy World of All Time</h1>');
+            })
+
+
+            // FADE IN, FADE OUT
+            $('#fade-out').click(function() {
+                $('form h1').fadeOut();
+            })
+
+            $('#fade-in').click(function() {
+                $('form h1').fadeIn();
+            })
+
+
+            // SLIDE UP, SLIDE DOWN
+            $('#mistborn').click(function() {
+                $('#wellOfAscension, #heroOfAges').slideDown();
+            })
+
+            $('input[type=radio').click(function() {
+                $(this).toggle();
+            })
+
+            // BELOW ARE CSS CHANGERS
+            $('#attrInline').click(function() {
+                $('button, p').css('display', 'inline-block');
+            })
+
+            $('#attrCSS').click(function() {
+                $('div').css({
+                    'background-color': 'darkgrey',
+                    'border' : '4px solid darkcyan',
+                    'color' : 'white',
+                    'font-size': '32px',
+                    'text-align' : 'center',
+                    'margin' : '20px',
+                    'padding' : '20px'
+                });
+            })
+        })
+    </script>
+</body>
+</html>

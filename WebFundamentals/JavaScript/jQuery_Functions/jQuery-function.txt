@@ -1,0 +1,17 @@
+click       check
+hide        check
+show        check
+toggle      works but not how i want
+slideDown   not working
+slideUp     not working
+slideToggle check
+fadeIn      not working
+fadeOut     not working
+addClass    check
+before      check
+after       check       
+append      check
+html        check
+attr        check
+val         not working
+text        adding text inside textbox?
