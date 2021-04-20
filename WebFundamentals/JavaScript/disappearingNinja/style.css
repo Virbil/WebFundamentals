@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 970px;
+    background-color: #D5D2AE;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+#blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+img {
+    flex: 1;
+    width: 200px;
+    margin: 10px;
+}
+#restore {
+    background-color: aqua;
+}
