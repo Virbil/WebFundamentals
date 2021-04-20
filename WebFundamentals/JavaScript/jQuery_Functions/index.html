@@ -7,21 +7,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>jQuery Functions</title>
 </head>
+
 <body>
-    <div id="addClass">
-        <h1>AddClass</h1>
-        <button id="add-class">AddClass</button>
-        <p id="myRedParagraph">Click the button to add class 'red' to this paragraph</p>
+    <div id="add-class">
+        <h1>Add Class</h1>
+        <button id="add-class">Add Class</button>
+        <p id="my-red-paragraph">Click the button to add class 'red' to this paragraph</p>
+        <button id="make-red">Make the newly added Class element red</button>
     </div>
 
-    <div id="slideToggle">
+    <div>
         <h1>Slidetoggle</h1>
-        <button id="slidetoggle">Slidetoggle</button>
+        <button id="slide-toggle">Slidetoggle</button>
         <p>Click the button to slidetoggle a hidden image</p>
         <img src="cooler.png" alt="" hidden='true' height="300px">
     </div>
 
-    <div id="append">
+    <div>
         <h1>Append</h1>
         <button id="append">Append</button>
         <p id="get-appended">Click the button to append a new paragraph</p>
@@ -31,9 +33,9 @@
         <h1 class="demo-box">Demonstration Box</h1>
         <p>This h2 inner HTML is about to change.</p>
     </div>
-    <button id="changeHTML">Change the HTML now!</button>
+    <button id="change-html">Change the HTML now!</button>
 
-    <div id="hideMe">
+    <div id="hide-me">
         <h1>Practicing hiding single elements like a clicked button</h1>
         <p>My jQuery is selecting a button inside a named id.</p>
         <button>Hide Me</button>
@@ -46,7 +48,9 @@
             <li>The Well of Ascension</li>
             <li>The Hero of Ages</li>
         </ul>
-        <button id="addBefore">Add Before</button>
+        <button id="add-before">Add Before</button>
+        <button id="slide-up">Slide the p-tag up</button>
+        <button id="slide-down">Slide the p-tag down</button>
     </div>
 
     <br><br>
@@ -59,6 +63,8 @@
             <input class="my-name" type="text" placeholder="Enter First Name">
             <label id="last-name" type="text">Last Name: </label>
             <input class="my-name" type="text" placeholder="Enter Last Name">
+
+            <br><br>
             
             <!-- FADE IN, FADE OUT -->
             <button id="fade-out">Fade Out Form H1</button>
@@ -68,10 +74,10 @@
     
             <input type="radio" id="mistborn" name="book1" value="mistborn">
             <label for="mistborn">Mistborn</label><br>
-            <input type="radio" id="wellOfAscension" name="book2" value="wellOfAscension">
-            <label for="wellOfAscension">The Well Of Ascension</label><br>
-            <input type="radio" id="heroOfAges" name="book3" value="heroOfAges">
-            <label for="heroOfAges">The Hero Of Ages</label>
+            <input type="radio" id="well-of-ascension" name="book2" value="well-of-ascension">
+            <label for="well-of-ascension">The Well Of Ascension</label><br>
+            <input type="radio" id="hero-of-ages" name="book3" value="hero-of-ages">
+            <label for="hero-of-ages">The Hero Of Ages</label>
         </form>
     </div>
 
@@ -81,19 +87,23 @@
     </div>
     
     <hr>
-    <button id="attrInline">Add Attribute</button>
+    <button id="attr-inline">Add Attribute</button>
     <hr>
 
     <hr>
-    <button id="attrCSS">Add a Bunch of CSS</button>
+    <button id="attr-css">Add a Bunch of CSS</button>
     <hr>
 
     <script>
         $(document).ready(function(){
-            console.log($(document).val());
+            // console.log($(document).val());
             
             $('#add-class').click(function() {
-                $('#myRedParagraph').addClass('myAddedClass');                
+                $('#my-red-paragraph').addClass('my-added-class');                
+            })
+
+            $('#make-red').click(function() {
+                $('.my-added-class').css('background-color', '#B22222');
             })
             
             $('p').click(function() {
@@ -101,7 +111,7 @@
                 // console.log('hitting click event listener');
             })
 
-            $('#slidetoggle').click(function() {
+            $('#slide-toggle').click(function() {
                 $('img').slideToggle('slow');
             }); // is the semi-colon necessary?
 
@@ -110,32 +120,33 @@
             })
 
             $('#append').click(function() {
-                $('#get-appended').append('<p>Testing adding a new paragraph</p>')
+                $('#get-appended').append('<p>Appending a new paragraph</p>')
             })
             
-            $('#changeHTML').click(function() {
+            $('#change-html').click(function() {
                 $('div.demo-container').html('<h3>All new content. <em>I replaced the h2</em></h3>');
             })
 
-            $('#hideMe button').click(function() {
+            $('#hide-me button').click(function() {
                 $(this).hide();
             })
 
             $('#submit').click(function() {  //input[type=submit]
-                $('#hideMe button').show();
+                $('#hide-me button').show();
             })
             
-            $('#addBefore').click(function() {
+            $('#add-before').click(function() {
                 $('#list').before('<h1>Best Fantasy World of All Time</h1>');
             })
 
-
             // FADE IN, FADE OUT
-            $('#fade-out').click(function() {
+            $('#fade-out').click(function(event) {
+                event.preventDefault();
                 $('#my-form').fadeOut('slow');
             })
 
-            $('#fade-in').click(function() {
+            $('#fade-in').click(function(event) {
+                event.preventDefault();
                 $('#my-form').fadeIn('slow');
             })
 
@@ -152,19 +163,28 @@
 
             // SLIDE UP, SLIDE DOWN
             $('#mistborn').click(function() {
-                $('#wellOfAscension, #heroOfAges').slideDown();
+                $('#well-of-ascension, #hero-of-ages').slideDown();
             })
 
+            $('#slide-up').click(function() {
+                $('p').slideUp();
+            })
+
+            $('#slide-down').click(function() {
+                $('p').slideDown();
+            })
+
+            // TOGGLE APPEARANCE
             $('input[type=radio').click(function() {
                 $(this).toggle();
             })
 
             // BELOW ARE CSS CHANGERS
-            $('#attrInline').click(function() {
+            $('#attr-inline').click(function() {
                 $('button, p').css('display', 'inline-block');
             })
 
-            $('#attrCSS').click(function() {
+            $('#attr-css').click(function() {
                 $('div').css({
                     'background-color': 'darkgrey',
                     'border' : '4px solid darkcyan',
