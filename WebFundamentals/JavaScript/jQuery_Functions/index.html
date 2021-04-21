@@ -39,7 +39,10 @@
         <h1>Practicing hiding single elements like a clicked button</h1>
         <p>My jQuery is selecting a button inside a named id.</p>
         <button>Hide Me</button>
-        <input id="submit" type="submit" value="Submit">
+        <input id="submit" type="submit" value="Unhide Me">
+        <br><br>
+        <button id="slide-up">Slide the p-tag up</button>
+        <button id="slide-down">Slide the p-tag down</button>
     </div>
 
     <div>
@@ -49,8 +52,6 @@
             <li>The Hero of Ages</li>
         </ul>
         <button id="add-before">Add Before</button>
-        <button id="slide-up">Slide the p-tag up</button>
-        <button id="slide-down">Slide the p-tag down</button>
     </div>
 
     <br><br>
@@ -58,11 +59,13 @@
     <div>
         <h1 id="my-form">My Form</h1>
 
-        <form>
+        <form id='form1' action="process.php" method="POST">
             <label id="first-name" type="text">First Name: </label>
-            <input class="my-name" type="text" placeholder="Enter First Name">
+            <input class="my-name" type="text" placeholder="Enter First Name" name="first_name">
             <label id="last-name" type="text">Last Name: </label>
-            <input class="my-name" type="text" placeholder="Enter Last Name">
+            <input class="my-name" type="text" placeholder="Enter Last Name" name="last_name">
+            Email<input type="text" name="email">
+            <input type="submit" value="submit!">
 
             <br><br>
             
@@ -79,11 +82,22 @@
             <input type="radio" id="hero-of-ages" name="book3" value="hero-of-ages">
             <label for="hero-of-ages">The Hero Of Ages</label>
         </form>
+
+        <button id="btn">Click me to use .submit() differently!</button>
     </div>
 
-    <div>
+    <div id="b-sands">
         <h1 id="brandon">Brandon Sanderson is the best!</h1>
-        <button id="add-text">Add Text to H1</button>
+        <h3>Mistborn Series</h3>
+        <h3>The Reckoners Series</h3>
+        <h3>The Stormlight Archive</h3>
+        <ol id="stormlight">
+            <li><h3>The Way of Kings</h3></li>
+            <li><h3>Words of Radiance</h3></li>
+            <li><h3>Oathbringer</h3></li>
+            <li><h3>Rhythm of War</h3></li>
+        </ol>
+        <button id="add-text">His world building is insane!!!!</button>
     </div>
     
     <hr>
@@ -127,7 +141,7 @@
                 $('div.demo-container').html('<h3>All new content. <em>I replaced the h2</em></h3>');
             })
 
-            $('#hide-me button').click(function() {
+            $('#hide-me button').click(function() { //also hides the SlideUp/Down buttons
                 $(this).hide();
             })
 
@@ -139,6 +153,7 @@
                 $('#list').before('<h1>Best Fantasy World of All Time</h1>');
             })
 
+            // START OF FORM jQUERY
             // FADE IN, FADE OUT
             $('#fade-out').click(function(event) {
                 event.preventDefault();
@@ -150,16 +165,41 @@
                 $('#my-form').fadeIn('slow');
             })
 
+
+            // return false doesn't allow the page to refresh
+            // .submit works in 2 ways 1) listener 2) used to hard submit
+
+            // .serialize preps forms being handled by a computer
+            // each name= gets attached
+            $('#form1').submit(function() {
+                alert('you are submitting me!');
+                console.log($(this).serialize());
+                return false;
+            })
+
+            $('btn').click(function() {
+                $('#form1').submit();
+            })
+            
             // VAL CHANGE UPPERCASE ALL
             $('.my-name').on('blur', function() {
                 $(this).val(function( i, val ) {
                     return val.toUpperCase();
                 });
             })
+            // END OF FORM jQuery
+
+
+            
 
             $('#add-text').click(function() {
                 $('#brandon').text("Brandon Sanderson's world building is the best!");
             })
+
+            $('#b-sands').click(function() {
+                $(this).children().children().css({'background-color': '#8FBC8F', 'color':'black'});
+            })
+            $('#stormlight').hover
 
             // SLIDE UP, SLIDE DOWN
             $('#mistborn').click(function() {
