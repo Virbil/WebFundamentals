@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian and Tab using jQuery UI</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $( "#accordion" ).accordion();
+            $( "#tabs" ).tabs();
+        })
+    </script>
+    
+    <style type="text/css">
+        h1 {
+            background-color: #4E4556;
+            color: whitesmoke;
+            padding: 10px;
+        }
+        #accordion {
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>World's Best Coffee Roasters</h1>
+    <div id="accordion">
+        <h3>The Barn</h3>
+        <div>
+            <p>The Barn’s MO is fairly simple: source, roast and brew stupidly good coffee.</p>
+                <ul>
+                    <li>Hometown: Berlin, Germany</li>
+                    <li>Year Founded: 2010</li>
+                    <li>Instagram: @thebarnberlin</li>
+                </ul>
+        </div>
+        <h3>Coffee Supreme</h3>
+        <div>
+            <p>
+                Coffee Supreme is decades ahead of most roasters in the coffee world. Its been 
+                roasting beans since the ’90s, and it sources those beans from virtually every 
+                specialty region and sub-region out there.
+            </p>
+            <ul>
+                <li>Hometown: Wellington, New Zealand</li>
+                <li>Year Founded: 1993</li>
+                <li>Instagram: @coffee_supreme</li>
+            </ul>
+        </div>
+        <h3>Seesaw Coffee</h3>
+        <div>
+            <p>
+                ust about every industry that makes things to be sold has, at some point, 
+                considered the idea of breaking into China and its unfathomably large 
+                potential. Coffee is no different. Rumblings from in-the-know coffee people 
+                like James Hoffmann and green-coffee buyers from all over have been talking 
+                about it for a while now, but the great Chinese coffee boom may finally be happening.
+            </p>
+            <ul>
+                <li>Hometown: Shanghai, China</li>
+                <li>Year Founded: 2012</li>
+                <li>Instagram: @seesawcoffee</li>
+            </ul>
+        </div>
+        <h3>Switch Coffee</h3>
+        <div>
+            <p>
+                Switch Coffee is an unlikely addition to the list. It’s not a large-scale roaster, 
+                it operates out of a single café with a single Probat roaster and is headed by a 
+                single person. But Masahiro Onishi’s shop size belies its goodness.
+            </p>
+            <ul>
+                <li>Hometown: Tokyo, Japan</li>
+                <li>Year Founded: 2013</li>
+                <li>Instagram: @switchcoffeetky</li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>Runner's Up</h1>
+    
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">180 Coffee - South Korea</a></li>
+            <li><a href="#tabs-2">Right Side Coffee - Castelldefels, Spain</a></li>
+            <li><a href="#tabs-3">Gardelli Specialty Coffees - Forlì, Italy</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>South Korea went from a country drinking primarily instant coffee to one craving the 
+                best specialty coffee there is in just a few years. Put another way, the number of 
+                cafés in South Korea has grown nearly three times over in the last five years alone. 
+                This makes it one of, if not the, fastest emerging market in specialty coffee and coffee 
+                at large.
+            </p>
+        </div>
+        <div id="tabs-2">
+            <p>Spain is and has been drenched in coffee for some time, just not much of it very good. 
+                Joaquín Parra’s Spanish coffee roasting instituion is named for the side of the brain 
+                that dictates “creativity and passion,” and Right Side Coffee’s beans exude that.
+            </p>
+        </div>
+        <div id="tabs-3">
+            <p>If there were a Michael Jordan of the coffee world, it would be Rubens Gardelli. By 
+                accolades, he’s the most successful competition roaster ever. He’s qualified for the 
+                most World Coffee Roasting Championships (four of five times), won the most recent one, 
+                won the Italian Coffee Roasting Championship four years running and somehow has also won 
+                multiple Brewer’s Cups in Italy and a World Brewer’s Cup. No roaster comes close to 
+                these achievements.
+            </p>            
+        </div>
+    </div>
+</body>
+</html>
