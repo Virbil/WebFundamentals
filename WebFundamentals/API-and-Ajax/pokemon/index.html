@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Pokemon</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    
+    
+    <script>
+        function loopPokemon() {
+            var output = '';
+            
+            for (var i = 1; i < 152; i++) {
+                output += "\n<img src=";
+                imgBaseURL = "http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/";
+                output += imgBaseURL + i + ".png>\n";
+            }
+            document.getElementById("wrapper").innerHTML = output;
+        }
+
+        loopPokemon();
+    </script>
+
+</body>
+</html>
