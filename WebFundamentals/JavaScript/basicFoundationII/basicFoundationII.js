@@ -134,6 +134,7 @@ function previousLengths(x) {
 	return x;
 }
 // console.log(previousLengths(["hello", "dojo", "awesome"]));
+// console.log(previousLengths(["cat", "rabbit", "dog", "bird"]));
 
 // Add Seven - Build a function that accepts an array. Return a new array with all the values 
 // of the original, but add 7 to each. Do not alter the original array.  Example, addSeven([1,2,3]) 
@@ -152,8 +153,8 @@ function addSeven(x) {
 // reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like so... [2,4,6,1,3].  
 // Do this without creating an empty temporary array.  (Hint: you'll need to swap values).
 
-// WRONG SOLUTION!!
 function reverse(x) {
+	// WRONG SOLUTION!!
 	// for (var i = 0; i < x.length / 2; i++) { 
 	// 	var temp = x[i];
 	// 	x[i] = x[x.length - 1 - i];
@@ -208,8 +209,8 @@ function alwaysHungry(x) {
 // ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  
 // No need to return the array this time.
 
-// WRONG SOLUTION!!
 function swapTowardCenter(x) {
+	// WRONG SOLUTION!!
 	// for (var i = 0; i < x.length; i++) {
 	// 	if (i % 2 === 0) {
 	// 		var temp = x[i];
@@ -227,8 +228,8 @@ function swapTowardCenter(x) {
 	}
 	return x;
 }
-console.log(swapTowardCenter([true,42,"Ada",2,"pizza"]));
-console.log(swapTowardCenter([1,2,3,4,5,6]));
+console.log(swapTowardCenter([true, 42,"Ada", 2,"pizza"]));
+console.log(swapTowardCenter([1, 2, 3, 4, 5, 6]));
 
 // Scale the Array - Given an array arr and a number num, multiply all values in the array arr by the 
 // number num, and return the changed array arr.  For example, scaleArray([1,2,3], 3) should return [3,6,9].
