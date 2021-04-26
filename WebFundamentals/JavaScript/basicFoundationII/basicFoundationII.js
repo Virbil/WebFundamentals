@@ -10,7 +10,7 @@ function makeItBig(x) {
 	}
 	return x;
 }
-console.log(makeItBig([-1,3,5,-5]));
+// console.log(makeItBig([-1,3,5,-5]));
 
 // Print Low, Return High - Create a function that takes in an array of numbers.  
 // The function should print the lowest value in the array, and return the highest 
@@ -30,7 +30,7 @@ function printLowReturnHigh(x) {
 	console.log(lowestNum);
 	return highestNum;
 }
-console.log(printLowReturnHigh([-1,3,9934,5,35,-83945,-5]));
+// console.log(printLowReturnHigh([-1,3,9934,5,35,-83945,-5]));
 
 // Print One, Return Another - Build a function that takes in an array of numbers.  
 // The function should print the second-to-last value in the array, and return the 
@@ -45,7 +45,7 @@ function print2ndReturnOdd(x){
 		}
 	}
 }
-console.log(print2ndReturnOdd([3,9934,5,35,-83945,-5]));
+// console.log(print2ndReturnOdd([3,9934,5,35,-83945,-5]));
 
 // Double Vision - Given an array (similar to saying 'takes in an array'), create a 
 // function that returns a new array where each value in the original array has been 
@@ -59,7 +59,7 @@ function double(x) {
 	}
 	return dblArr;
 }
-console.log(double([1,2,3]));
+// console.log(double([1,2,3]));
 
 // Count Positives - Given an array of numbers, create a function to replace the last 
 // value with the number of positive values found in the array.  Example, 
@@ -77,19 +77,33 @@ function countPositives(x) {
 	temp[x.length -1] = posCount;
 	return temp;
 }
-console.log(countPositives([-1,1,1,1]));
+// console.log(countPositives([-1,1,1,1]));
 
 // Evens and Odds - Create a function that accepts an array.  Every time that array has 
 // three odd values in a row, print "That's odd!".  Every time the array has three evens 
 // in a row, print "Even more so!".
 
-// UNSOLVED!
-
 function evenOdds(x) {
-	for (var i = 0; i < x.length; i++) {
-	
-	}
+	let odds = 0, evens = 0;
+
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] % 2 === 0) {
+            evens++;
+        }
+        if (evens === 3) {
+            console.log("Even more so!");
+            evens = 0;
+        }
+        if (x[i] % 2 !== 0) {
+            odds++;
+        }
+        if (odds === 3) {
+            console.log("That's odd!")
+            odds = 0;
+        }
+    }
 }
+// console.log(evenOdds([3,2,2,1,4,2,4,1,1,1]));
 
 
 // Increment the Seconds - Given an array of numbers arr, add 1 to every other element, 
@@ -105,7 +119,7 @@ function add1ToOddIndices(arr) {
 	}
 	return arr;
 }
-console.log(add1ToOddIndices([3,9934,5,35,-83945,-5]));
+// console.log(add1ToOddIndices([3,9934,5,35,-83945,-5]));
 
 // Previous Lengths - You are passed an array (similar to saying 'takes in an array' or 
 // 'given an array') containing strings.  Working within that same array, replace each 
@@ -119,7 +133,7 @@ function previousLengths(x) {
 	}
 	return x;
 }
-console.log(previousLengths(["hello", "dojo", "awesome"]));
+// console.log(previousLengths(["hello", "dojo", "awesome"]));
 
 // Add Seven - Build a function that accepts an array. Return a new array with all the values 
 // of the original, but add 7 to each. Do not alter the original array.  Example, addSeven([1,2,3]) 
@@ -132,7 +146,7 @@ function addSeven(x) {
 	}
 	return newArr;
 }
-console.log(addSeven([1,2,3]));
+// console.log(addSeven([1,2,3]));
 
 // Reverse Array - Given an array, write a function that reverses its values, in-place.  Example: 
 // reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like so... [2,4,6,1,3].  
@@ -140,13 +154,20 @@ console.log(addSeven([1,2,3]));
 
 // WRONG SOLUTION!!
 function reverse(x) {
-	var temp = x;
-	for (var i = 0; i < x.length; i++) { 
-		x[i] = temp[x.length - 1];
+	// for (var i = 0; i < x.length / 2; i++) { 
+	// 	var temp = x[i];
+	// 	x[i] = x[x.length - 1 - i];
+	// 	temp = x[x.length - 1 - i];
+	// }
+
+	for (var i = 0; i <= Math.floor((x.length - 1) / 2); i++) {
+		let temp = x[i];
+		x[i] = x[x.length - 1 - i];
+		x[x.length - 1 - i] = temp;
 	}
 	return x;
 }
-console.log(reverse([3,1,6,4,2]));
+// console.log(reverse([3,1,6,4,2]));
 
 // Outlook: Negative - Given an array, create and return a new one containing all the values of the 
 // original array, but make them all negative (not simply multiplied by -1). Given [1,-3,5], 
@@ -160,7 +181,7 @@ function negativeAll(x) {
 		return x;
 	}
 }
-console.log(negativeAll([1,-3,5]));
+// console.log(negativeAll([1,-3,5]));
 
 
 // Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the 
@@ -179,8 +200,8 @@ function alwaysHungry(x) {
 		console.log("I'm hungry");
 	}
 }
-alwaysHungry(["hello", "dojo", "awesome", 3, 4, 23344, "food", -222399, "coding", "food", "world"]);
-alwaysHungry(["hello", "dojo", "awesome", 3, 4, 23344,  -222399, "coding", "world"]);
+// alwaysHungry(["hello", "dojo", "awesome", 3, 4, 23344, "food", -222399, "coding", "food", "world"]);
+// alwaysHungry(["hello", "dojo", "awesome", 3, 4, 23344,  -222399, "coding", "world"]);
 
 // Swap Toward the Center - Given an array, swap the first and last values, third and third-to-last 
 // values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into 
@@ -189,10 +210,19 @@ alwaysHungry(["hello", "dojo", "awesome", 3, 4, 23344,  -222399, "coding", "worl
 
 // WRONG SOLUTION!!
 function swapTowardCenter(x) {
-	var temp = x;
-	for (var i = 0; i < x.length; i++) {
-		if (i % 2 != 0) {
-			x[i] = temp[x.length - i];
+	// for (var i = 0; i < x.length; i++) {
+	// 	if (i % 2 === 0) {
+	// 		var temp = x[i];
+	// 		x[i] = x[x.length - 1 - i];
+	// 		temp = x[x.length - 1 - i];
+	// 	}
+	// }
+
+	for (var i = 0; i <= Math.floor((x.length - 1) / 2); i++) {
+		if (i % 2 === 0) { 
+			let temp = x[i];
+			x[i] = x[x.length - 1 - i];
+			x[x.length - 1 - i] = temp;
 		}
 	}
 	return x;
@@ -209,4 +239,4 @@ function scaleArray(arr, num) {
 	}
 	return arr;
 }
-console.log(scaleArray([1,2,3], 3));
+// console.log(scaleArray([1,2,3], 3));
