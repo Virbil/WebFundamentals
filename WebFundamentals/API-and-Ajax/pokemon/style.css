@@ -1,5 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
 #wrapper {
+    flex: 3;
     background-color: lightcoral;
     padding: 20px;
     margin: 20px;
+}
+
+#pokemon {
+    flex: 1;
+    background-color: lightgrey;
+    height: 450px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+    /* position: absolute;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); */
+}
+#pokemon > * {
+    text-align: center;
+    list-style: none;
+}
+#pokemon li {
+    margin-right: 40px;
+}
+#pokemon img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
