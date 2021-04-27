@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <title>Open Weather API</title>
+
+    <style>
+        h3 {
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function() {
+                var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=",
+                    city = $('#city').val(),
+                    apiKey = "&APPID=1436d1ccd508f4c2303611af1b49ea6a"
+                    url = baseURL + city + apiKey;
+
+                $.get(url, function(res) {
+                    console.log(res);
+                    var tempInFarenheit = (res.main.feels_like - 273.15) * 9/5 + 32;
+                    var html_str = "";
+
+                    html_str += "<h3>" + city + ": </h3>";
+                    html_str += ' ' + res.weather[0].description + "<br>";
+
+                    html_str += "<h3>Temperature: </h3>";
+                    html_str += ' ' + tempInFarenheit.toFixed(2) + "<span>&#176;</span>F <br>";
+
+                    html_str += "<h3>Coord: </h3>";
+                    html_str += ' ' + res.coord.lon + " LON, " + res.coord.lat + " LAT<br>";
+
+                    $("#cityInfo").html(html_str);
+                }, 'json');
+                
+                return false; // return false so the page doesn't refresh
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <form>
+        City: <input type="text" id="city" name="city" required>
+        <input type="submit" id="submit" name="submit" value="Submit Query">  <!--onsubmit="return validateForm()"-->
+        <!-- <p id="formValidation"></p> -->
+    </form>
+
+    <div id="cityInfo"></div>
+
+    <!-- <script>
+        function validateForm() {
+            console.log("Entered validator helper function");
+            var x, text;
+            x = document.getElementById("city").value;
+            console.log(x);
+            var letters = /^[A-Za-z]+$/;
+
+            if (!x.value.match(letters)) {
+                text = "Please enter a valid City name";
+            }
+            document.getElementById("formValidation").innerHTML = text;
+        };
+    </script> -->
+</body>
+</html>
