@@ -18,7 +18,7 @@
             $('form').submit(function() {
                 var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=",
                     city = $('#city').val(),
-                    apiKey = "&APPID=1436d1ccd508f4c2303611af1b49ea6a"
+                    apiKey = "&APPID="
                     url = baseURL + city + apiKey;
 
                 $.get(url, function(res) {
